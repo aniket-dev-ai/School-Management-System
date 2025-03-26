@@ -5,7 +5,7 @@ module.exports.registerAdminController = async (req, res) => {
     try {
         //get user data
         const { name, email, password, phoneNumber, schoolName } = req.body;
-
+        console.log(name, email, password, phoneNumber, schoolName);
         
         //creating user
         const newAdmin = await createAdmin({ name, email, password, phoneNumber, schoolName })
